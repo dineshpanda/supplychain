@@ -6,6 +6,9 @@ class AccountHistoryResource < ApplicationResource
 
   # Direct associations
 
+  belongs_to :owner,
+             resource: AccountResource
+
   # Indirect associations
 
 end

@@ -7,6 +7,9 @@ class AccountResource < ApplicationResource
 
   # Direct associations
 
+  has_one    :account_history,
+             foreign_key: :owner_id
+
   belongs_to :supplier
 
   # Indirect associations
