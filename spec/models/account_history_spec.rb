@@ -10,6 +10,8 @@ RSpec.describe AccountHistory, type: :model do
 
     describe "InDirect Associations" do
 
+    it { should have_one(:supplier) }
+
     end
 
     describe "Validations" do

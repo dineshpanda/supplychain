@@ -6,6 +6,10 @@ class Supplier < ApplicationRecord
 
   # Indirect associations
 
+  has_one    :history,
+             :through => :account,
+             :source => :account_history
+
   # Validations
 
   # Scopes

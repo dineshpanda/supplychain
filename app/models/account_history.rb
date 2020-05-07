@@ -6,6 +6,10 @@ class AccountHistory < ApplicationRecord
 
   # Indirect associations
 
+  has_one    :supplier,
+             :through => :owner,
+             :source => :supplier
+
   # Validations
 
   # Scopes
