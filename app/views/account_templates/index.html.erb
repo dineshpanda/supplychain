@@ -60,7 +60,11 @@
 
         <!-- Display account.supplier_id start -->
         <td>
-          <%= account.supplier.email %>
+          <% if account.supplier.present? %>
+            <a href="/suppliers/<%= account.supplier.id %>">
+              <%= account.supplier.email %>
+            </a>
+          <% end %>
         </td>
         <!-- Display account.supplier_id end -->
 

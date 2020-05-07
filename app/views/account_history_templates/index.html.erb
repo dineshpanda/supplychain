@@ -56,7 +56,11 @@
 
         <!-- Display account_history.owner_id start -->
         <td>
-          <%= account_history.owner.supplier_id %>
+          <% if account_history.owner.present? %>
+            <a href="/accounts/<%= account_history.owner.id %>">
+              <%= account_history.owner.supplier_id %>
+            </a>
+          <% end %>
         </td>
         <!-- Display account_history.owner_id end -->
 

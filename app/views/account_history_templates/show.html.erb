@@ -34,7 +34,11 @@
       </dt>
       <!-- Display owner_id start -->
       <dd>
-        <%= @account_history.owner_id %>
+        <% if @account_history.owner.present? %>
+          <a href="/accounts/<%= @account_history.owner_id %>">
+            <%= @account_history.owner.supplier_id %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display owner_id end -->
 

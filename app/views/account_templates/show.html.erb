@@ -38,7 +38,11 @@
       </dt>
       <!-- Display supplier_id start -->
       <dd>
-        <%= @account.supplier_id %>
+        <% if @account.supplier.present? %>
+          <a href="/suppliers/<%= @account.supplier_id %>">
+            <%= @account.supplier.email %>
+          </a>
+        <% end %>
       </dd>
       <!-- Display supplier_id end -->
 
