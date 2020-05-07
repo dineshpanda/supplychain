@@ -5,21 +5,15 @@
 
 <hr>
 
-<!-- Form account_history start -->
 <form action="/create_account_history" method="post">
-<!-- Form account_history end -->
 
-  <!-- Label and input for owner_id start -->
   <div class="form-group">
     <label for="owner_id">
       Owner
     </label>
 
-    <!-- Input for owner_id start -->
     <%= select_tag(:owner_id, options_from_collection_for_select(Account.all, :id, :supplier_id, @account_history.owner_id), :class => "form-control") %>
-    <!-- Input for owner_id end -->
   </div>
-  <!-- Label and input for owner_id end -->
 
   <button class="btn btn-block btn-outline-secondary">
     Create account history

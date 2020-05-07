@@ -4,24 +4,16 @@
 
 <hr>
 
-<!-- Form account start -->
 <form action="/update_account/<%= @account.id %>" method="post">
-<!-- Form account end -->
 
-  <!-- Label and input for supplier_id start -->
-  <!-- Label and input for supplier_id end -->
 
-  <!-- Label and input for acc_type start -->
   <div class="form-group">
     <label for="acc_type">
       Acc type
     </label>
 
-    <!-- Input for acc_type start -->
     <input type="text" id="acc_type" name="acc_type" class="form-control" value="<%= @account.acc_type %>">
-    <!-- Input for acc_type end -->
   </div>
-  <!-- Label and input for acc_type end -->
 
   <button class="btn btn-block btn-outline-secondary">
     Update account

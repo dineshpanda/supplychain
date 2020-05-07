@@ -11,7 +11,6 @@
         </a>
       </div>
 
-      <!-- Edit link account start -->
       <div class="col">
         <% if current_supplier == @account.supplier %>
           <a href="/accounts/<%= @account.id %>/edit" class="btn btn-block btn-sm btn-outline-secondary">
@@ -19,9 +18,7 @@
           </a>
         <% end %>
       </div>
-      <!-- Edit link account end -->
 
-      <!-- Delete link account start -->
       <div class="col">
         <% if current_supplier == @account.supplier %>
           <a href="/delete_account/<%= @account.id %>" class="btn btn-block btn-sm btn-outline-secondary">
@@ -29,14 +26,12 @@
           </a>
         <% end %>
       </div>
-      <!-- Delete link account end -->
     </div>
 
     <dl>
       <dt>
         Supplier
       </dt>
-      <!-- Display supplier_id start -->
       <dd>
         <% if @account.supplier.present? %>
           <a href="/suppliers/<%= @account.supplier_id %>">
@@ -44,37 +39,28 @@
           </a>
         <% end %>
       </dd>
-      <!-- Display supplier_id end -->
 
       <dt>
         Acc type
       </dt>
-      <!-- Display acc_type start -->
       <dd>
         <%= @account.acc_type %>
       </dd>
-      <!-- Display acc_type end -->
 
       <dt>
         Created at
       </dt>
-      <!-- Display created_at start -->
       <dd>
         <%= time_ago_in_words(@account.created_at) %> ago
       </dd>
-      <!-- Display created_at end -->
 
       <dt>
         Updated at
       </dt>
-      <!-- Display updated_at start -->
       <dd>
         <%= time_ago_in_words(@account.updated_at) %> ago
       </dd>
-      <!-- Display updated_at end -->
     </dl>
   </div>
 </div>
 
-<!-- Show Page Customization starts -->
-<!-- Show Page Customization end -->

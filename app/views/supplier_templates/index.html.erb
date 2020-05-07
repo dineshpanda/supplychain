@@ -8,13 +8,9 @@
   </div>
 </div>
 
-<!-- Ransack Code start -->
 
-<!-- Ransack Code end -->
 
-<!-- Location Map Code start -->
 
-<!-- Location Map Code end -->
 
 <hr>
 
@@ -40,23 +36,17 @@
 
       <% @suppliers.each do |supplier| %>
       <tr>
-        <!-- Display supplier.id start -->
         <td>
           <%= supplier.id %>
         </td>
-        <!-- Display supplier.id end -->
 
-        <!-- Display supplier.created_at start -->
         <td>
           <%= time_ago_in_words(supplier.created_at) %> ago
         </td>
-        <!-- Display supplier.created_at end -->
 
-        <!-- Display supplier.updated_at start -->
         <td>
           <%= time_ago_in_words(supplier.updated_at) %> ago
         </td>
-        <!-- Display supplier.updated_at end -->
 
         <td>
           <a href="/suppliers/<%= supplier.id %>">
