@@ -1,0 +1,73 @@
+<div class="row mb-3">
+  <div class="col-md-8 offset-md-2">
+    <h1>
+      Account #<%= @account.id %> details
+    </h1>
+
+    <div class="row mb-3">
+      <div class="col">
+        <a href="/accounts" class="btn btn-block btn-outline-secondary">
+          Go back
+        </a>
+      </div>
+
+      <!-- Edit link account start -->
+      <div class="col">
+        <a href="/accounts/<%= @account.id %>/edit" class="btn btn-block btn-outline-secondary">
+          Edit account
+        </a>
+      </div>
+      <!-- Edit link account end -->
+
+      <!-- Delete link account start -->
+      <div class="col">
+        <a href="/delete_account/<%= @account.id %>" class="btn btn-block btn-outline-secondary">
+          Delete account
+        </a>
+      </div>
+      <!-- Delete link account end -->
+    </div>
+
+    <dl>
+      <dt>
+        Supplier
+      </dt>
+      <!-- Display supplier_id start -->
+      <dd>
+        <%= @account.supplier_id %>
+      </dd>
+      <!-- Display supplier_id end -->
+
+      <dt>
+        Acc type
+      </dt>
+      <!-- Display acc_type start -->
+      <dd>
+        <%= @account.acc_type %>
+      </dd>
+      <!-- Display acc_type end -->
+
+      <dt>
+        Created at
+      </dt>
+      <!-- Display created_at start -->
+      <dd>
+        <%= time_ago_in_words(@account.created_at) %> ago
+      </dd>
+      <!-- Display created_at end -->
+
+      <dt>
+        Updated at
+      </dt>
+      <!-- Display updated_at start -->
+      <dd>
+        <%= time_ago_in_words(@account.updated_at) %> ago
+      </dd>
+      <!-- Display updated_at end -->
+    </dl>
+  </div>
+</div>
+
+<!-- Show Page Customization starts -->
+
+<!-- Show Page Customization end -->
