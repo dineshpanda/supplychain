@@ -11,4 +11,6 @@ class AccountHistoryResource < ApplicationResource
 
   # Indirect associations
 
+  has_one    :supplier
+
 end
