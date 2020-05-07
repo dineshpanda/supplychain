@@ -1,6 +1,9 @@
 class Supplier < ApplicationRecord
   # Direct associations
 
+  has_one    :account,
+             :dependent => :destroy
+
   # Indirect associations
 
   # Validations
