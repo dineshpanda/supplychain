@@ -1,6 +1,6 @@
 class SuppliersController < ApplicationController
   def index
-    @suppliers = Supplier.all
+    @suppliers = Supplier.page(params[:page]).per(10)
 
     render("supplier_templates/index.html.erb")
   end

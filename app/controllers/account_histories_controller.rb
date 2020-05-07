@@ -1,6 +1,6 @@
 class AccountHistoriesController < ApplicationController
   def index
-    @account_histories = AccountHistory.all
+    @account_histories = AccountHistory.page(params[:page]).per(10)
 
     render("account_history_templates/index.html.erb")
   end
