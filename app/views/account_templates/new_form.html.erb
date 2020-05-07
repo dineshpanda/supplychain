@@ -10,15 +10,9 @@
 <!-- Form account end -->
 
   <!-- Label and input for supplier_id start -->
-  <div class="form-group">
-    <label for="supplier_id">
-      Supplier
-    </label>
-
-    <!-- Input for supplier_id start -->
-    <%= select_tag(:supplier_id, options_from_collection_for_select(Supplier.all, :id, :email, @account.supplier_id), :class => "form-control") %>
-    <!-- Input for supplier_id end -->
-  </div>
+  <!-- Input for "supplier_id" start -->
+  <input type="hidden" name="supplier_id" value="<%= current_supplier.id %>">
+  <!-- Input for "supplier_id" end -->
   <!-- Label and input for supplier_id end -->
 
   <!-- Label and input for acc_type start -->

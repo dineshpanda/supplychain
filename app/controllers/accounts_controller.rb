@@ -41,7 +41,7 @@ class AccountsController < ApplicationController
   def update_row
     @account = Account.find(params.fetch("id_to_modify"))
 
-    @account.supplier_id = params.fetch("supplier_id")
+    
     @account.acc_type = params.fetch("acc_type")
 
     if @account.valid?
