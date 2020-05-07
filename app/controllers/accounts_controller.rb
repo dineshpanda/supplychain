@@ -10,7 +10,8 @@ class AccountsController < ApplicationController
   end
 
   def index
-    @accounts = Account.page(params[:page]).per(10)
+    @q = Account.ransack(params[:q])
+    @accounts = @q.result(:distinct => true).includes(:supplier, :account_history).page(params[:page]).per(10)
 
     render("account_templates/index.html.erb")
   end
