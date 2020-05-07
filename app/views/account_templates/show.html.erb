@@ -13,17 +13,21 @@
 
       <!-- Edit link account start -->
       <div class="col">
-        <a href="/accounts/<%= @account.id %>/edit" class="btn btn-block btn-outline-secondary">
-          Edit account
-        </a>
+        <% if current_supplier == @account.supplier %>
+          <a href="/accounts/<%= @account.id %>/edit" class="btn btn-block btn-sm btn-outline-secondary">
+            Edit account
+          </a>
+        <% end %>
       </div>
       <!-- Edit link account end -->
 
       <!-- Delete link account start -->
       <div class="col">
-        <a href="/delete_account/<%= @account.id %>" class="btn btn-block btn-outline-secondary">
-          Delete account
-        </a>
+        <% if current_supplier == @account.supplier %>
+          <a href="/delete_account/<%= @account.id %>" class="btn btn-block btn-sm btn-outline-secondary">
+            Delete account
+          </a>
+        <% end %>
       </div>
       <!-- Delete link account end -->
     </div>
