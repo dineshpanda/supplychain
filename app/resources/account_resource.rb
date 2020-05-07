@@ -7,6 +7,8 @@ class AccountResource < ApplicationResource
 
   # Direct associations
 
+  belongs_to :supplier
+
   # Indirect associations
 
 end

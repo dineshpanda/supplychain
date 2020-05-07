@@ -7,6 +7,8 @@ class SupplierResource < ApplicationResource
 
   # Direct associations
 
+  has_one    :account
+
   # Indirect associations
 
 end
