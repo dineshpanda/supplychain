@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root :to => "accounts#index"
   # Routes for the Account history resource:
 
   # CREATE
