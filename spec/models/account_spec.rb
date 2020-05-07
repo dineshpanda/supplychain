@@ -4,6 +4,8 @@ RSpec.describe Account, type: :model do
   
     describe "Direct Associations" do
 
+    it { should have_one(:account_history) }
+
     it { should belong_to(:supplier) }
 
     end
