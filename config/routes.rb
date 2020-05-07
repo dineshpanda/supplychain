@@ -1,4 +1,23 @@
 Rails.application.routes.draw do
+  # Routes for the Account history resource:
+
+  # CREATE
+  get("/account_histories/new", { :controller => "account_histories", :action => "new_form" })
+  post("/create_account_history", { :controller => "account_histories", :action => "create_row" })
+
+  # READ
+  get("/account_histories", { :controller => "account_histories", :action => "index" })
+  get("/account_histories/:id_to_display", { :controller => "account_histories", :action => "show" })
+
+  # UPDATE
+  get("/account_histories/:prefill_with_id/edit", { :controller => "account_histories", :action => "edit_form" })
+  post("/update_account_history/:id_to_modify", { :controller => "account_histories", :action => "update_row" })
+
+  # DELETE
+  get("/delete_account_history/:id_to_remove", { :controller => "account_histories", :action => "destroy_row" })
+
+  #------------------------------
+
   # Routes for the Account resource:
 
   # CREATE

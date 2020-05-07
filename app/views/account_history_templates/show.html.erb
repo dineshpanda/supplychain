@@ -1,0 +1,64 @@
+<div class="row mb-3">
+  <div class="col-md-8 offset-md-2">
+    <h1>
+      Account history #<%= @account_history.id %> details
+    </h1>
+
+    <div class="row mb-3">
+      <div class="col">
+        <a href="/account_histories" class="btn btn-block btn-outline-secondary">
+          Go back
+        </a>
+      </div>
+
+      <!-- Edit link account_history start -->
+      <div class="col">
+        <a href="/account_histories/<%= @account_history.id %>/edit" class="btn btn-block btn-outline-secondary">
+          Edit account history
+        </a>
+      </div>
+      <!-- Edit link account_history end -->
+
+      <!-- Delete link account_history start -->
+      <div class="col">
+        <a href="/delete_account_history/<%= @account_history.id %>" class="btn btn-block btn-outline-secondary">
+          Delete account history
+        </a>
+      </div>
+      <!-- Delete link account_history end -->
+    </div>
+
+    <dl>
+      <dt>
+        Owner
+      </dt>
+      <!-- Display owner_id start -->
+      <dd>
+        <%= @account_history.owner_id %>
+      </dd>
+      <!-- Display owner_id end -->
+
+      <dt>
+        Created at
+      </dt>
+      <!-- Display created_at start -->
+      <dd>
+        <%= time_ago_in_words(@account_history.created_at) %> ago
+      </dd>
+      <!-- Display created_at end -->
+
+      <dt>
+        Updated at
+      </dt>
+      <!-- Display updated_at start -->
+      <dd>
+        <%= time_ago_in_words(@account_history.updated_at) %> ago
+      </dd>
+      <!-- Display updated_at end -->
+    </dl>
+  </div>
+</div>
+
+<!-- Show Page Customization starts -->
+
+<!-- Show Page Customization end -->
